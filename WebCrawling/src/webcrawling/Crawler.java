@@ -22,14 +22,15 @@ public class Crawler {
     public void crawl(Consumer consumer) {
         try {
             Document doc = Jsoup.connect(consumer.getUrl()).get();
-            Elements paragraphs = doc.select(".post-body");
-            for (Element p : paragraphs) {
+            Elements body = doc.select("body");
+            consumer.setSearchResult("No result for: " + consumer.getSearchText());
+            for (Element p : body) {
                 if (p.text().toLowerCase().contains(consumer.getSearchText())) {
-                    System.out.println(p.text());
+                    consumer.setSearchResult(consumer.getSearchText());
                 }
             }
         } catch (IOException ex) {
-            Logger.getLogger(WebCrawling.class.getName())
+            Logger.getLogger(Crawler.class.getName())
                     .log(Level.SEVERE, null, ex);
         }
     }

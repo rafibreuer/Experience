@@ -5,9 +5,11 @@ package webcrawling;
  * @author rafi
  */
 public class Consumer {
+//http://kolleldeals.blogspot.com/
 
     private String searchText;
     private String url;
+    private String searchResult;
 
     public Consumer() {
     }
@@ -35,5 +37,12 @@ public class Consumer {
 
     public String getSearchText() {
         return this.searchText;
+    }
+
+    public String getSearchResult() {
+        return this.url + "\n has: " + this.searchResult;
+    }
+    public void setSearchResult(String result) {
+        this.searchResult=result;
     }
 }
