@@ -3,7 +3,7 @@ package webcrawling;
 public class WebCrawling {
 
     public static void main(String[] args) {
-        new Consumer().Start();
+        new Consumer("http://kolleldeals.blogspot.com/", "laptop").Start();
     }
 
 }

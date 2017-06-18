@@ -1,43 +1,39 @@
 package webcrawling;
 
-import java.io.IOException;
-import java.util.logging.*;
-import org.jsoup.*;
-import org.jsoup.nodes.*;
-import org.jsoup.select.*;
-
 /**
  *
  * @author rafi
  */
 public class Consumer {
 
+    private String searchText;
+    private String url;
+
+    public Consumer() {
+    }
+
+    public Consumer(String url, String text) {
+        this.url = url;
+        this.searchText = text;
+    }
+
     public void Start() {
-        crawl();
+        new Crawler().crawl(this);
     }
 
-    private void crawl() {
-        String crawlUrl = this.getCrawlUrl("http://kolleldeals.blogspot.com/");
-        String searchText = this.getSearch("laptop");
-        try {
-            Document doc = Jsoup.connect(crawlUrl).get();
-            Elements paragraphs = doc.select(".post-body");
-            for (Element p : paragraphs) {
-                if (p.text().toLowerCase().contains(searchText)) {
-                    System.out.println(p.text());
-                }
-            }
-        } catch (IOException ex) {
-            Logger.getLogger(WebCrawling.class.getName())
-                    .log(Level.SEVERE, null, ex);
-        }
+    public void setSearchText(String text) {
+        this.searchText = text;
     }
 
-    private String getCrawlUrl(String url) {
-        return url;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    private String getSearch(String text) {
-        return text;
+    public String getUrl() {
+        return this.url;
+    }
+
+    public String getSearchText() {
+        return this.searchText;
     }
 }
