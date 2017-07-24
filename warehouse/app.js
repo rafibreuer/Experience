@@ -140,7 +140,3 @@ app.post('/addItem', (req, res) => {
 });
 const port = process.env.PORT || 8000;
 app.listen(port, () => console.log(`server is running on port ${port}`));
-
-// app.listen(3000, function () {
-//   console.log('Example app listening on port 3000!')
-// });
