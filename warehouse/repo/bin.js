@@ -9,4 +9,5 @@ const binSchema = new mongoose.Schema({
 }, {
     collections: 'bins'
   });
+
 module.exports = mongoose.model('bin', binSchema);

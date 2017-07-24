@@ -1,0 +1,7 @@
+.i,.i img{
+    width: 100%;
+    height:300px;
+}
+.right.carousel-control, .left.carousel-control {
+  display:none;
+}

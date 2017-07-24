@@ -27,7 +27,7 @@ function basicAuth(app) {
                         req.session.name = result.name;
                         if (result.perm === 'admin') req.session.perm = true;
                         else req.session.perm = null;
-                        res.redirect('http://localhost:3000');
+                        res.redirect('http://localhost:8000');
                     } else
                         fail(res);
                 });

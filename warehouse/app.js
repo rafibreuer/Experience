@@ -23,6 +23,7 @@ mongoose.connection.on('open', () => {
   console.log('connected');
 });
 app.use(auth(app));
+
 app.get('/', (req, res) => {
   const name = { "name": "BitBean", "type": "Warehouse Manager" };
   bin.find({}, {
@@ -137,7 +138,9 @@ app.post('/addItem', (req, res) => {
       res.end();
     });
 });
+const port = process.env.PORT || 8000;
+app.listen(port, () => console.log(`server is running on port ${port}`));
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
-});
+// app.listen(3000, function () {
+//   console.log('Example app listening on port 3000!')
+// });
