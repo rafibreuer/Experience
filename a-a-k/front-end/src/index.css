@@ -1,0 +1,22 @@
+body {
+  margin-bottom:50px;
+  padding: 0;
+  font-family: sans-serif;
+}
+.a{
+  cursor:pointer;
+}
+.k{
+background-color:blue;
+color:whitesmoke;
+border-radius:25px;
+  padding:.8%;
+}
+.k:hover{
+background-color:green;
+}
+.form-group .e{
+  color:red;
+  font-size:10px;
+  height:0;
+}
