@@ -1,0 +1,14 @@
+
+.li :hover{
+color:grey;
+}
+.li{
+    color:white;
+}
+.fd{
+    margin-top:25px;
+}
+table{
+    background-color: white;
+    border:none;
+}
