@@ -1,5 +1,4 @@
-import { Login, SignUp } from '../../../types/users';
-import { ServiceTypeForm } from '../../../types/vendors';
+import { Login} from '../../../types/users';
 export interface InputProps {
     name: string;
     type: string;
@@ -23,10 +22,6 @@ export interface InputState {
 export interface LoginFormState {
     login: Login;
 }
-export interface SignUpFormState {
-    signUp: SignUp;
-    vendorCheckbox: boolean
-}
 
 export interface FormProps {
     children: any;
@@ -44,9 +39,6 @@ export interface RadioButtonInputProps {
     radioButtonArray: [string];
     onChange: (e: any) => void;
     required: boolean
-}
-export interface ServiceTypeForm {
-    serviceTypeForm: ServiceTypeForm;
 }
 export interface CreatePasswordInputProps {
     onChange: (e: any) => void;

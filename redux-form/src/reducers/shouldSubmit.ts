@@ -13,7 +13,6 @@ export default function submitReducer(state: any = [], action: any) {
             });
             return state;
         case types.CLEAR_SHOULD_SUBMIT:
-        console.log('in reducer');
             return action.payload;
         default:
             return state
